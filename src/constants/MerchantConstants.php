@@ -2,7 +2,7 @@
 namespace tbryan24\Huifupay\constants;
 
 /**
- * Demo 使用到的演示参数
+ * Demo 使用到的演示参数1
  * @package BsPayDemo\constants
  */
 class MerchantConstants{
