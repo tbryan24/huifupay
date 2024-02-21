@@ -1,0 +1,19 @@
+{
+    "name": "tbryan24/huifupay",
+    "description": "huifupay",
+    "type": "library",
+    "require": {
+        "php": ">=7.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "tbryan",
+            "email": "wcffgkobe@163.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {"tbryan24\\Huifupay\\": "src"}
+    }
+}
