@@ -15,7 +15,7 @@ class BsPay extends BsPayRequestV2
     public static $isDebug;
     # 生产模式
     public static $isProdMode;
-    # 日志路径
+    # 日志路径1
     public static $logDir = "";
 
     # 商户配置信息
