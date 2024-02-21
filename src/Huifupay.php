@@ -5,7 +5,7 @@ namespace tbryan24\Huifupay;
 # 设置是否调试模式，不配置默认关闭：false
 use tbryan24\Huifupay\BsPaySdk\core\BsPay;
 
-class huifupay
+class Huifupay
 {
     private $config;
     private $log_dir;
@@ -14,7 +14,7 @@ class huifupay
     /**
      * @param mixed $debug
      */
-    public function setDebug($debug): huifupay
+    public function setDebug($debug): Huifupay
     {
         $this->debug = $debug;
         return $this;
@@ -23,7 +23,7 @@ class huifupay
     /**
      * @param mixed $log_dir
      */
-    public function setLogDir($log_dir): huifupay
+    public function setLogDir($log_dir): Huifupay
     {
         $this->log_dir = $log_dir;
         return $this;
