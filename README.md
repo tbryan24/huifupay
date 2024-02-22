@@ -5,8 +5,12 @@
 本地暂时忽略无用扩展依赖composer require tbryan24/huifupay:dev-main --ignore-platform-req=ext-mongodb
 
 因为sdk需要初始化一些配置，需要在项目启动入口完成初始化，以webman框架为例，目前我的测试加载方案为(暂时还不知道有无问题)
-1、在support目录下新建HuifupayInit.php
+
+##### 1、在support目录下新建HuifupayInit.php
+
 内容如下：
+
+```php
 <?php
 
 namespace support;
@@ -30,13 +34,21 @@ class HuifupayInit implements Bootstrap
         $huifupay->setDebug($debug)->setLogDir(runtime_path() . '/logs')->setConfig($config)->init();
     }
 }
+```
 
-2、打开 config/bootstrap.php将MemReport类加入到启动项中。
 
+
+##### 2、打开 config/bootstrap.php将MemReport类加入到启动项中。
+
+```php
 return [
     // ...这里省略了其它配置...
+    
+	\support\HuifupayInit::class
 
-    \support\HuifupayInit::class
 ];
+```
+
+
 
 这样我们就完成了一个业务初始化流程。
