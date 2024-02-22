@@ -22,8 +22,8 @@ class HuifupayInit implements Bootstrap
         if (true === config('app.debug')) {
             $debug = true;
         }
-        $config["sys_id"] = "6666000146998706";
-        $config["product_id"] = "PAYUN";
+        $config["sys_id"] = "你的sys_id";
+        $config["product_id"] = "你的product_id";
         $config["rsa_merch_private_key"] = "填写你的商户私钥";
         $config["rsa_huifu_public_key"] = "填写你的汇付公钥";
         $huifupay = new Huifupay();
