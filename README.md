@@ -4,7 +4,7 @@
 
 本地暂时忽略无用扩展依赖composer require tbryan24/huifupay:dev-main --ignore-platform-req=ext-mongodb
 
-因为sdk需要初始化一些配置，需要在项目启动入口完成初始化，以webman框架为例，目前我的测试加载方案为
+因为sdk需要初始化一些配置，需要在项目启动入口完成初始化，以webman框架为例，目前我的测试加载方案为(暂时还不知道有无问题)
 1、在support目录下新建HuifupayInit.php
 内容如下：
 <?php
