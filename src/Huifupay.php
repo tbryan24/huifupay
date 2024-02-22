@@ -57,7 +57,7 @@ class Huifupay
         //define("PROD_MODE", false);
 
         # SDK 初始化文件加载
-        require_once "/BsPaySdk/init.php";
+        require_once dirname(__FILE__) . "/BsPaySdk/init.php";
 
         # 配置商户信息
         //require_once "/constants/MerchantConstants.php";
