@@ -19,7 +19,7 @@ class BsPayTools
         try {
             openssl_sign($data, $signature, $key, $alg);
         } catch (\Exception $e) {
-            echo $e->getMessage();
+            throw new \Exception($e->getMessage());
         }
         return base64_encode($signature);
     }
@@ -30,7 +30,7 @@ class BsPayTools
         try {
             openssl_public_encrypt($data, $encryptResult, $key, $padding);
         } catch (\Exception $e) {
-            echo $e->getMessage();
+            throw new \Exception($e->getMessage());
         }
         return base64_encode($encryptResult);
     }

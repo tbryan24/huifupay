@@ -27,7 +27,7 @@ class BsPay extends BsPayRequestV2
             try {
                 throw new Exception('缺少SDK配置信息');
             } catch (Exception $e) {
-                echo $e->getMessage();
+                throw new Exception($e->getMessage());
             }
         }
 
@@ -38,7 +38,7 @@ class BsPay extends BsPayRequestV2
                 try {
                     throw new Exception('SDK配置文件不存在');
                 } catch (Exception $e) {
-                    echo $e->getMessage();
+                    throw new Exception($e->getMessage());
                 }
             }
             $cfg_file_str = file_get_contents($config_info);
@@ -50,7 +50,7 @@ class BsPay extends BsPayRequestV2
                 try {
                     throw new Exception('SDK配置文件格式异常');
                 } catch (Exception $e) {
-                    echo $e->getMessage();
+                    throw new Exception($e->getMessage());
                 }
             }
         }
